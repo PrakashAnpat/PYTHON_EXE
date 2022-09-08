@@ -1,0 +1,7 @@
+#print("How old are you",end = " ")
+age = input("Enter age:")
+#print("How tall are you:",end = " ")
+height = input("Enter height:")
+#print("How much do you weight?",end = " ")
+weight = input("Enter weight:")
+print(f"So you're age {age} old,{height} tall and weight {weight} heavy.")
