@@ -1,0 +1,22 @@
+class Other():
+    def override(self):
+        print("OTHER override()")
+    def implicit(self):
+        print("OTHER implicit()")
+    def altered(self):
+        print("OTHER altered()")
+class Child():
+    def __init__(self):
+        self.other = Other()  # Other class called inside Child class constructor.
+    def implicit(self):
+        self.other.implicit()
+    def override(self):
+        print("Child override()")
+    def altered(self):
+        print("CHILD,BEFORE OTHER altered()")
+        self.other.altered()
+        print("CHILD,AFTER OTHER altered()")
+son = Child()   # child class instance created.
+son.implicit()
+son.override()
+son.altered()
